@@ -1,2 +1,1 @@
-# MyWebsite
-MyWebsite www.stefanocappa.it
+# Example
