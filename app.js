@@ -9,10 +9,10 @@ var app = express();
 
 //use uglify
 var appClientFiles = [
-  'app_client/app.js',
-  'app_client/auth/login/login.controller.js',
-  'app_client/profile/profile.controller.js',
-  'app_client/common/services/authentication.service.js',
+'app_client/app.js',
+'app_client/auth/login/login.controller.js',
+'app_client/profile/profile.controller.js',
+'app_client/common/services/authentication.service.js',
 ];
 var uglified = uglifyJs.minify(appClientFiles, { compress : false });
 fs.writeFile('public/angular/mysite.min.js', uglified.code, function (err){

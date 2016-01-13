@@ -3,26 +3,27 @@
 
 	function config ($routeProvider, $locationProvider) {
 		$routeProvider
-			.when('/', {
-          		templateUrl: '/auth/login/login.view.html',
-          		controller: 'loginCtrl',
-          		controllerAs: 'vm'
-			})
-			.when('/profile', {
-          		templateUrl: '/profile/profile.view.html',
-          		controller: 'profileCtrl',
-          		controllerAs: 'vm'
-			})
-      		.otherwise({redirectTo: '/'});
+		.when('/', {
+			templateUrl: '/auth/login/login.view.html',
+			controller: 'loginCtrl',
+			controllerAs: 'vm'
+		})
+		.when('/profile', {
+			templateUrl: '/profile/profile.view.html',
+			controller: 'profileCtrl',
+			controllerAs: 'vm'
+		})
+		.otherwise({redirectTo: '/'});
 		
 		$locationProvider.html5Mode({
-		  enabled: true,
-		  requireBase: false
+			enabled: true,
+			requireBase: true,
+			rewriteLinks: false
 		});
 	}
 
 	angular
-		.module('mySiteApp')
-		.config(['$routeProvider', '$locationProvider', config]);
+	.module('mySiteApp')
+	.config(['$routeProvider', '$locationProvider', config]);
 
 })();

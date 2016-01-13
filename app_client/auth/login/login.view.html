@@ -1,5 +1,20 @@
 <div class="container">
 
-	<button type="button" ng-click="vm.on3dPartyLogin('facebook')">Login with Facebook</button>
+	<br/><br/>
+
+	<a ng-href="{{vm.facebookOauthUrl}}">Log in with Facebook (Working)</a>
+
+	<br/><br/>
+
+	<a class="btn btn-primary" ng-href="{{vm.facebookOauthUrl}}">Log in with Facebook (Working)</a>
+
+	<br/><br/>
+	
+	<!-- Not working: XMLHttpRequest cannot load (...) No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:3000' is therefore not allowed access.-->
+	<a class="btn btn-primary" ng-click="vm.on3dPartyLogin('facebook')">Login with Facebook (Not working [AJAX] - see the browser's console)</a>
+
+	<br/><br/>
+
+	<p> How can i use the third button (Ajax solution) with angular view+controller+service and finally a rest call to my apis to create a working solution without the path that I hardcoded into the controller (view+controller+rest call)?</p>
 
 </div>
