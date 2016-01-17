@@ -14,6 +14,8 @@
 
     //using the working solution
     vm.facebookOauthUrl = 'api/auth/facebook';
+    vm.googleOauthUrl = 'api/auth/google';
+    vm.githubOauthUrl = 'api/auth/github';
 
     //using the not working solution
     vm.on3dPartyLogin = function (service) {
